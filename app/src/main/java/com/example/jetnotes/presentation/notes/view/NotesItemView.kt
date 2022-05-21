@@ -15,10 +15,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.jetnotes.domain.model.Note
 
 
 @Composable
-fun NotesItemView() {
+fun NotesItemView( note: Note) {
     Card(
         backgroundColor = Color.White,
         modifier = Modifier
@@ -28,7 +29,7 @@ fun NotesItemView() {
         elevation = 0.dp
     ) {
         Text(
-            text = "Hello",
+            text = note.noteTitle.orEmpty(),
             fontWeight = FontWeight.Normal,
             fontSize = 15.sp,
             color = Color.Black,
@@ -43,5 +44,4 @@ fun NotesItemView() {
 @Preview
 @Composable
 fun DefaultPreview() {
-    NotesItemView()
 }
