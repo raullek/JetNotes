@@ -26,7 +26,6 @@ fun NotesDetailScreen(
     navController: NavController,
     notesDetailViewModel: NotesDetailViewModel
 ) {
-    val state =
 
 
 
